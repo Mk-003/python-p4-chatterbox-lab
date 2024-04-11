@@ -23,6 +23,8 @@ def make_messages():
         message = Message(
             body=fake.sentence(),
             username=rc(usernames),
+            created_at=fake.time(start_date="-30d", end_date="now"),
+            updated_at=fake.updated(start_date="-30d", end_date="now")
         )
         messages.append(message)
 
@@ -32,3 +34,5 @@ def make_messages():
 if __name__ == '__main__':
     with app.app_context():
         make_messages()
+
+print('1234')

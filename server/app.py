@@ -16,8 +16,7 @@ db.init_app(app)
 
 @app.route('/messages')
 def messages():
-    return ''
-
+    return "Hello 👋"
 @app.route('/messages/<int:id>')
 def messages_by_id(id):
     return ''
